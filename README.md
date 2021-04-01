@@ -16,13 +16,13 @@ curl localhost:8000/redfish/v1/Systems/<uuid>
 
 curl -d '{"ResetType":"<type>"}' -H "Content-Type: application/json" -X POST localhost:8000/redfish/v1/Systems/<uuid>/Actions/ComputerSystem.Reset
 Where <type> is:
-    On
-    ForceOff
-    GracefulShutdown
-    GracefulRestart
-    ForceRestart
-    Nmi
-    ForceOn
+	On
+	ForceOff
+	GracefulShutdown
+	GracefulRestart
+	ForceRestart
+	Nmi
+	ForceOn
 
 
 podman ps -q --filter name=pod-sushy
