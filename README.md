@@ -12,10 +12,12 @@ cd pod-sushy
 
 curl localhost:8000/redfish/v1/Systems
 
-curl localhost:8000/redfish/v1/Systems/<uuid>
+curl localhost:8000/redfish/v1/Systems/UUID
 
-curl -d '{"ResetType":"<type>"}' -H "Content-Type: application/json" -X POST localhost:8000/redfish/v1/Systems/<uuid>/Actions/ComputerSystem.Reset
-Where <type> is:
+curl -d '{"ResetType":"ACTION"}' -H "Content-Type: application/json" -X POST localhost:8000/redfish/v1/Systems/UUID/Actions/ComputerSystem.Reset
+
+Where ACTION is:
+
 	On
 	ForceOff
 	GracefulShutdown
