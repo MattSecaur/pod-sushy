@@ -1,8 +1,8 @@
 FROM fedora:latest
-LABEL description="containerized sushy" version="3.7"
+LABEL description="containerized sushy" version="3.8"
 MAINTAINER msecaur@redhat.com
 
-#RUN dnf -y update
+RUN dnf -y update
 
 # Setup
 USER root
