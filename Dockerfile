@@ -1,5 +1,5 @@
-FROM centos:8
-LABEL description="containerized sushy" version="1.6"
+FROM fedora:latest
+LABEL description="containerized sushy" version="3.7"
 MAINTAINER msecaur@redhat.com
 
 #RUN dnf -y update
@@ -8,7 +8,7 @@ MAINTAINER msecaur@redhat.com
 USER root
 
 # Packages
-RUN yum install -y python3-pip python3-libvirt && dnf clean all
+RUN yum install -y python3-pip python3-libvirt gcc python3-devel && dnf clean all
 RUN pip3 install -U pip setuptools
 RUN pip3 install sushy sushy-tools
 

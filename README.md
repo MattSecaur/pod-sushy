@@ -1,3 +1,5 @@
+Sushy is a Redfish BMC emulator for KVM hypervisors.
+
 To install on a RHEL8/CentOS8 KVM hypervisor:
 
 dnf install -y git podman curl
